@@ -5,7 +5,6 @@ export const metadata = {
 
 
 export const dynamicParams = true 
-export const dynamic = 'force-dynamic'
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
