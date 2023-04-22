@@ -1,6 +1,6 @@
 
 
-
+export const dynamicParams = true
 export default function Other({params}) {
   
 
@@ -13,6 +13,6 @@ export async function generateStaticParams() {
   const posts = [{slug: 'good'},{slug:'hello'}]
 
   return posts.map((post) => ({
-    slug: post.slug,
+    name: post.slug,
   }));
 }
