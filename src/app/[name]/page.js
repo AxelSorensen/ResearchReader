@@ -1,3 +1,4 @@
+'use client'
 
 export const dynamicParams = true 
 export default function Other() {

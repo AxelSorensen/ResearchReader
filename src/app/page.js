@@ -1,4 +1,6 @@
-export const dynamicParams = true 
+'use client'
+
+export const dynamicParams = true;
 
 export default function Home() {
   return (
