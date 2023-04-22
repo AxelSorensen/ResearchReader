@@ -1,6 +1,5 @@
 
 
-export const dynamicParams = true
 export default function Other({params}) {
   
 
