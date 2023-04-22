@@ -14,7 +14,7 @@ export default function MyComponent({searchParams}) {
       WebViewer(
         {
           path: 'lib',
-          initialDoc: `https://aokjapukmfknqyuqmrdg.supabase.co/storage/v1/object/public/papers/${searchParams.name.replace('+', ' ')}.pdf?version=${Math.random()}`
+          initialDoc: `https://aokjapukmfknqyuqmrdg.supabase.co/storage/v1/object/public/papers/${searchParams?.name?.replace('+', ' ')}.pdf?version=${Math.random()}`
         },
         viewer.current,
       ).then(async(instance) => {
@@ -47,7 +47,7 @@ export default function MyComponent({searchParams}) {
               supabase
               .storage
               .from('papers')
-              .upload(`${searchParams.name.replace('+', ' ')}.pdf`, blob, {
+              .upload(`${searchParams?.name?.replace('+', ' ')}.pdf`, blob, {
                 upsert: true,
               }).then(()=> {
                 setLoading(false)
