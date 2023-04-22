@@ -14,20 +14,15 @@ export default function MyComponent({searchParams}) {
       WebViewer(
         {
           path: 'lib',
-          initialDoc: `https://aokjapukmfknqyuqmrdg.supabase.co/storage/v1/object/public/papers/${searchParams?.name?.replace('+', ' ')}.pdf?version=${Math.random()}`
         },
         viewer.current,
       ).then(async(instance) => {
 
         const { documentViewer, annotationManager } = instance.Core;
+        const res = await fetch(`https://aokjapukmfknqyuqmrdg.supabase.co/storage/v1/object/public/papers/${searchParams?.name?.replace('+', ' ')}.pdf?version=${Math.random()}`)
+        const blob = await res.blob()
+        instance.UI.loadDocument(blob);
 
-        documentViewer.addEventListener('documentLoaded', () => {
-          const doc = documentViewer.getDocument();
-          const pageNum = 1;
-
-          doc.loadThumbnail(pageNum, (thumbnail) => {
-          });
-        })
 
         // you can now call WebViewer APIs here...
         instance.UI.setHeaderItems(header => {
