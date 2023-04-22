@@ -1,6 +1,5 @@
 import './globals.css'
 
-export const dynamicParams = true;
 
 export const metadata = {
   title: 'Create Next App',
