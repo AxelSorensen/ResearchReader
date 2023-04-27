@@ -91,7 +91,6 @@ export default function Home() {
 
   useEffect(() => {
     let handler = (e) => {
-      console.log(e)
       if (menuRef.current && !menuRef.current?.contains(e.target)) {
         setMenu(false)
       }

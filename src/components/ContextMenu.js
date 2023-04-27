@@ -8,7 +8,6 @@ const ContextMenu = ({ position, setMenu, deletePaper, selectedPaper }, ref) => 
   const handleClick = (id) => {
     switch (id) {
       case 0:
-        console.log('edit')
         break;
       case 1:
         deletePaper(selectedPaper.id);
