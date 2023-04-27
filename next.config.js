@@ -10,8 +10,8 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = withPWA({
   output: "export",
-  basePath: '/ResearchReader',
-  assetPrefix: '/ResearchReader/'
+  basePath: process.env.NODE_ENV === 'production' ? '/ResearchReader' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/ResearchReader/' : ''
 });
 
 module.exports = nextConfig;

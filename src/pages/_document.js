@@ -5,7 +5,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link rel="manifest" href="/ResearchReader/manifest.webmanifest" />
+          <link rel="manifest" href={`${process.env.NODE_ENV === 'production' ? '/ResearchReader' : ''}/manifest.webmanifest`} />
           <link rel="shortcut icon" href="/ResearchReader/favicon.ico" />
           <link rel="apple-touch-icon" href="/ResearchReader/icon.png"></link>
           <meta name="theme-color" content="#fff" />

@@ -1,13 +1,14 @@
-import { HiPencilSquare, HiTrash } from "react-icons/hi2";
+import { HiOutlineCheckCircle, HiOutlineTrash, HiOutlineXCircle } from "react-icons/hi2";
 import { useRef, forwardRef } from "react";
 
-const ContextMenu = ({ position, setMenu, deletePaper, selectedPaper }, ref) => {
+const ContextMenu = ({ position, setMenu, deletePaper, selectedPaper, handleRead }, ref) => {
 
-  const actions = [{ id: 0, name: 'Edit', icon: <HiPencilSquare size={20} /> }, { id: 1, name: 'Delete', icon: <HiTrash size={20} />, color: 'red' }]
+  const actions = [{ id: 0, name: selectedPaper.read ? 'Mark as unread' : 'Mark as read', icon: selectedPaper.read ? <HiOutlineXCircle size={22}/> : <HiOutlineCheckCircle size={22} />  }, { id: 1, name: 'Delete', icon: <HiOutlineTrash size={20} />, color: 'red' }]
 
   const handleClick = (id) => {
     switch (id) {
       case 0:
+        handleRead()
         break;
       case 1:
         deletePaper(selectedPaper.id);
