@@ -2,13 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 @layer utilities {
+  .shadow-xs {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  }
   .shadow-sm {
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   }
   .shadow-md {
     box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.15);
   }
+  
   .line-clamp {
     display: -webkit-box;
     -webkit-line-clamp: 2;

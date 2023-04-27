@@ -1,13 +1,14 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react';
-import { supabase } from '../lib/supabaseClient';
+import { supabase } from '../../lib/supabaseClient';
 import ClipLoader from "react-spinners/ClipLoader";
 import { useSearchParams } from "next/navigation"
+import Loading from '@/components/Loading';
 
 export default function MyComponent() {
   const searchParams = useSearchParams();
-  const pdfname = searchParams.get('name');
+  const pdfname = searchParams.get('id');
 
   const viewer = useRef(null)
   const [loading, setLoading] = useState(false)
@@ -75,15 +76,7 @@ export default function MyComponent() {
   return (
     <>
     {loading &&
-      <div className="z-10 bg-black h-screen bg-opacity-20 absolute w-screen grid place-content-center" onClick={() => { setIsOpen(false); resetInput();}}>
-        <div className='bg-white p-4 flex flex-col rounded-md justify-around gap-2'>
-          <p className='m-auto'>Saving changes</p>
-        <ClipLoader className="m-auto"
-              size={20}
-              
-            />
-        </div>
-      </div>
+ <Loading text='Saving Changes'/>
     }
     <div className="MyComponent">
       <div className="webviewer" ref={viewer} style={{ height: "100vh" }}></div>
