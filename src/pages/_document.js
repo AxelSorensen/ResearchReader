@@ -6,7 +6,8 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="manifest" href="/ResearchReader/manifest.webmanifest" />
-          <link rel="apple-touch-icon" href="/icon.png"></link>
+          <link rel="shortcut icon" href="/ResearchReader/favicon.ico" />
+          <link rel="apple-touch-icon" href="/ResearchReader/icon.png"></link>
           <meta name="theme-color" content="#fff" />
         </Head>
         <body>
