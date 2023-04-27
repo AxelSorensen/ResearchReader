@@ -8,7 +8,7 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = withPWA({
   output: "export",
-  assetPrefix: './',
+  assetPrefix: '/ResearchReader/',
 });
 
 module.exports = nextConfig;
