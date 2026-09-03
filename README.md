@@ -37,4 +37,4 @@ Open [http://localhost:3000](http://localhost:3000), then navigate to `/pdf-view
 
 ## Status
 
-🚧 Personal-use prototype — the Supabase project URL/bucket is hardcoded, there's no auth on paper access, and navigation into the viewer is by manually building the `?id=` URL rather than a paper library UI.
+⚠️ Runs — `npm install && npm run build` succeeds cleanly (verified 2026-09-03) using the Supabase project URL/anon key already hardcoded in `src/lib/supabaseClient.js`, so no extra credentials are needed to build/run against that project. (A build-time ESLint config warning about `next/babel` is lint-only and doesn't block the build.) 🚧 Personal-use prototype — the Supabase project URL/bucket is hardcoded, there's no auth on paper access, and navigation into the viewer is by manually building the `?id=` URL rather than a paper library UI.
