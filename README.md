@@ -2,6 +2,8 @@
 
 A PDF viewer for research papers that saves your highlights and annotations back to the cloud, so you can pick up reading where you left off.
 
+![ResearchReader screenshot](docs/screenshot.png)
+
 ## Features
 
 - 📝 **Annotate PDFs in the browser** — full PDF viewer/annotator powered by PDFTron WebViewer
